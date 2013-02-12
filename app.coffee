@@ -42,4 +42,4 @@ mongoose.connection.on 'open', ()->
   console.log "CourseShark Jobs started on port #{port}"
 
 
-mongoose.connect app.config.MONGOHQ_URL||'mongpo'
+mongoose.connect app.config.MONGOHQ_URL||'mongo://localhost/test'
