@@ -39,7 +39,7 @@ mongoose.connection.on 'open', ()->
 
   # Start the app by listening on <port>
   server = app.listen port
-  console.log "Express-Boilerplate started on port #{port}"
+  console.log "CourseShark Jobs started on port #{port}"
 
 
 mongoose.connect app.config.MONGOHQ_URL||'mongpo'
