@@ -14,12 +14,22 @@
 
       <div id="user-info">
         <p>Sign up to be notified of our launch!</p>
-        <input type="email" name="email" placeholder="enter your .edu email address" autofocus="autofocus"/>
+        <p id="errors" style="display:none;"></p>
+        <input type="email" id="email" name="email" placeholder="enter your .edu email address" autofocus="autofocus" required/>
       </div>
 
       <div id="actions">
-        <button>Go</button>
+        <div class="share">
+          <span class='st_facebook'></span>
+          <span class='st_googleplus'></span>
+          <span class='st_twitter'></span>
+          <span class='st_reddit'></span>
+          <span class='st_email'></span>
+        </div>
+
+        <button id="submit-signup-form">Go</button>
       </div>
+
 
     </div> <!-- End signup-box -->
   </div> <!-- End row -->

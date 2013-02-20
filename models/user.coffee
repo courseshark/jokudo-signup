@@ -6,7 +6,8 @@ Schema = mongoose.Schema
 UserSchema = new Schema(
   email:
     type: String
-    index: true
+    index:
+      unique: true
   hashPassword:
     type: String
     index: true
@@ -68,11 +69,7 @@ UserSchema.method 'isPasswordless', () ->
 
 UserSchema.pre 'save', (next) ->
   @.modified = Date.now()
-  if @.isPasswordless()
-    next Error 'No password specified'
-  else
-    next()
-
+  next()
 
 
 # Exports
